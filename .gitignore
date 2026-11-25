@@ -1,0 +1,17 @@
+# Dependencies (do not submit)
+node_modules/
+
+# Vue production build output (recreated by `npm run build`)
+frontend/dist/
+
+# Logs and OS/editor files
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# NOTE: backend/.env is intentionally NOT ignored.
+# The assignment requires the real .env (local MongoDB URI, no secrets) to be committed.

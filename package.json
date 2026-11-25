@@ -1,0 +1,16 @@
+{
+  "name": "cis3339-homework1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CIS 3339 Homework 1 \u2013 Student Management System (Vue 3 + Express + MongoDB)",
+  "scripts": {
+    "postinstall": "cd backend && npm install && cd .. && cd frontend && npm install --include=dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}
