@@ -1,3 +1,5 @@
+// Legacy plain-JavaScript page helper. The Vue application is the supported
+// implementation; these functions are retained for compatibility with old HTML pages.
 async function searchStudent(event) {
     event.preventDefault();
     const name = document.getElementById('studentName').value;

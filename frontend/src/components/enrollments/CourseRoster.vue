@@ -27,6 +27,7 @@ const summary = computed(() =>
 
 <template>
   <div class="roster">
+    <!-- The roster controls and loading/error states mirror the enrollment store. -->
     <div class="roster__controls">
       <SelectField
         id="roster-course"

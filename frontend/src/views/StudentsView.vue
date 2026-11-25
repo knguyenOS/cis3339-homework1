@@ -19,6 +19,7 @@ const confirm = useConfirmStore();
 const deletingId = ref('');
 
 onMounted(() => {
+  // Refresh on route entry so edits made elsewhere are reflected immediately.
   studentStore.fetchStudents({ force: true });
 });
 

@@ -2,6 +2,7 @@ const config = require('./src/config');
 const app = require('./src/app');
 const { connectDatabase, disconnectDatabase } = require('./src/db');
 
+// Listen immediately; MongoDB initialization can continue without blocking HTTP startup.
 const server = app.listen(config.port, () => {
   console.log(`Student Management System running at http://localhost:${config.port}`);
 });
@@ -19,6 +20,7 @@ connectDatabase(config.mongoUri);
 
 async function shutdown(signal) {
   console.log(`${signal} received, shutting down...`);
+  // Stop accepting requests before closing the database connection.
   server.close();
   await disconnectDatabase().catch(() => {});
   process.exit(0);

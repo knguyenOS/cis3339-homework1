@@ -1,4 +1,6 @@
 <script setup>
+// This presentational table only renders rows and emits view/delete actions;
+// Pinia stores own loading, filtering, and API state.
 defineProps({
   students: { type: Array, required: true },
   caption: { type: String, required: true },

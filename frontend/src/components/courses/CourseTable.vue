@@ -1,4 +1,5 @@
 <script setup>
+// Presentational course table: emit mutations and let the parent/store handle state.
 import { RouterLink } from 'vue-router';
 import { plural } from '@/utils/format';
 

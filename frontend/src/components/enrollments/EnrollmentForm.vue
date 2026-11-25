@@ -32,6 +32,7 @@ function reload() {
 }
 
 async function submit() {
+  // Empty dropdown selections are caught by the shared form validator.
   if (!form.validateAll()) {
     await nextTick();
     document.querySelector('#enrollment-form [aria-invalid="true"]')?.focus();

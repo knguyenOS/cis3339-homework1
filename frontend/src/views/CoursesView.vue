@@ -17,9 +17,11 @@ const confirm = useConfirmStore();
 const deletingId = ref('');
 
 onMounted(() => {
+  // Force a fresh course list when this route is entered.
   courseStore.fetchCourses({ force: true });
 });
 
+// Aggregate server-provided enrollment counts for the panel description.
 const totalEnrollments = computed(() => courseStore.courses.reduce((sum, c) => sum + (c.enrollmentCount || 0), 0));
 const listDescription = computed(
   () => `${plural(courseStore.count, 'course')} · ${plural(totalEnrollments.value, 'enrollment')}`

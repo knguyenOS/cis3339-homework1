@@ -13,6 +13,7 @@ const form = useForm({ name: '', studentId: '', phone: '', zip: '' }, studentRul
 const { values, errors } = form;
 
 async function submit() {
+  // Run local rules first, then focus the first invalid control.
   if (!form.validateAll()) {
     await nextTick();
     document.querySelector('#student-form [aria-invalid="true"]')?.focus();

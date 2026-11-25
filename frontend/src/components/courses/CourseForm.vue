@@ -19,6 +19,7 @@ const normalizedPreview = computed(() => {
 });
 
 async function submit() {
+  // Validate locally before sending the POST request to the API.
   if (!form.validateAll()) {
     await nextTick();
     document.querySelector('#course-form [aria-invalid="true"]')?.focus();

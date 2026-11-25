@@ -11,6 +11,7 @@ const validationError = ref('');
 
 async function submit() {
   validationError.value = '';
+  // Require a non-empty query; the store also handles clearing the search.
   if (!query.value.trim()) {
     validationError.value = 'Enter a name or student ID to search.';
     return;
